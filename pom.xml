@@ -20,7 +20,7 @@
         <module>09-gateway</module>
         <module>10</module>
         <module>12-config</module>
-        <module>13-sentinel</module>
+        <!--<module>13-sentinel</module>-->
         <module>14-sleuth-zipkin</module>
         <module>15-skywalking</module>
         <module>18-seata</module>

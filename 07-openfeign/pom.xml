@@ -16,7 +16,7 @@
 
     <modules>
         <module>warehouse-service</module>
-        <module>order-service</module>
+        <module>order-service-07</module>
     </modules>
 
 </project>
