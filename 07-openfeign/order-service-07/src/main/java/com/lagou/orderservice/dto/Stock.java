@@ -1,4 +1,5 @@
 package com.lagou.orderservice.dto;
+
 //库存商品对象
 public class Stock {
     private Long skuId; //商品品类编号

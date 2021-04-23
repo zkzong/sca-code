@@ -15,7 +15,7 @@
     </properties>
 
     <modules>
-        <module>warehouse-service</module>
+        <module>warehouse-service-07</module>
         <module>order-service-07</module>
     </modules>
 

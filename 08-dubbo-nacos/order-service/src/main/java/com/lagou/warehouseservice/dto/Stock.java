@@ -9,6 +9,7 @@ public class Stock implements Serializable {
     private Integer quantity; //库存数量
     private String unit; //单位
     private String description; //描述信息
+
     //带参构造函数
     public Stock(Long skuId, String title, Integer quantity, String unit) {
         this.skuId = skuId;
