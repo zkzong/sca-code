@@ -1,4 +1,5 @@
 package com.lagou.gateway.filter;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -7,6 +8,7 @@ import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
+
 @Component //自动实例化并被Spring IOC容器管理
 //全局过滤器必须实现两个接口：GlobalFilter、Ordered
 //GlobalFilter是全局过滤器接口，实现类要实现filter()方法进行功能扩展
@@ -19,8 +21,9 @@ public class ElapsedFilter implements GlobalFilter, Ordered {
 
     /**
      * 实现filter()方法记录处理时间
+     *
      * @param exchange 用于获取与当前请求、响应相关的数据，以及设置过滤器间传递的上下文数据
-     * @param chain Gateway过滤器链对象
+     * @param chain    Gateway过滤器链对象
      * @return Mono对应一个异步任务，因为Gateway是基于Netty Server异步处理的,Mono对就代表异步处理完毕的情况。
      */
     @Override
@@ -37,7 +40,7 @@ public class ElapsedFilter implements GlobalFilter, Ordered {
                     Long startTime = exchange.getAttribute(ELAPSED_TIME_BEGIN);
                     if (startTime != null) {
                         logger.info(exchange.getRequest().getRemoteAddress() //远程访问的用户地址
-                                + " | " +  exchange.getRequest().getPath()  //Gateway URI
+                                + " | " + exchange.getRequest().getPath()  //Gateway URI
                                 + " | cost " + (System.currentTimeMillis() - startTime) + "ms"); //处理时间
                     }
                 })
