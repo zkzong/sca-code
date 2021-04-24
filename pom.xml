@@ -18,7 +18,7 @@
         <module>07-openfeign</module>
         <module>08-dubbo-nacos</module>
         <module>09-gateway</module>
-        <module>10</module>
+        <module>10-sentinel</module>
         <module>12-config</module>
         <!--<module>13-sentinel</module>-->
         <module>14-sleuth-zipkin</module>
