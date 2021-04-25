@@ -1,7 +1,6 @@
 package com.lagou.orderservice.controller;
 
 import com.lagou.orderservice.config.CustomConfig;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +12,7 @@ public class TestController {
     private CustomConfig customConfig;
 
     @GetMapping("/test")
-    public String test(){
+    public String test() {
         return "flag:" + customConfig.getFlag() + "<br/> database:" + customConfig.getDatabase();
     }
 }
