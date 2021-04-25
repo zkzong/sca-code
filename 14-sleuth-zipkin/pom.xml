@@ -15,9 +15,9 @@
     </properties>
 
     <modules>
-        <module>a-service</module>
-        <module>b-service</module>
-        <module>c-service</module>
+        <module>a-service-14</module>
+        <module>b-service-14</module>
+        <module>c-service-14</module>
     </modules>
 
 </project>
